@@ -8,6 +8,7 @@
     "start": "next start --hostname 127.0.0.1",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test:build-config": "node --test tests/build-config.test.mjs",
     "test:dates": "node --experimental-strip-types --test lib/compact-date.test.mjs"
   },
   "dependencies": {

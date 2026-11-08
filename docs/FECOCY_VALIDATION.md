@@ -106,3 +106,7 @@ Les quatre variables du premier lot sont absentes au contr?le initial. Aucun sec
 Les classeurs des lots Acteurs/Affiliations/Licences/Activit?s/Documents n'ont pas encore ?t? lus ni raccord?s dans ce premier point territorial. Les recettes affiliation cl?tur?e et licence historique avec club d'attribution diff?rent restent explicitement ? ex?cuter lors de ces lots.
 
 Contr?les HTTP Next locaux : GET /api/ligues, /api/ligues/01, /api/ententes et /api/clubs -> 503 avec code configuration et les quatre noms manquants ; aucun appel SDK Google. POST /api/ligues -> 409. GET /ligues?id=01 -> 200, erreur Configuration FECOCY incompl?te visible et aucun faux ?tat Aucune donn?e trouv?e. Serveur 127.0.0.1:3050 laiss? actif. .env.local absent, aucune valeur ajout?e ou modifi?e.
+
+### Sortie de build Vercel
+
+Next.js utilise le dossier standard `.next` lorsque `VERCEL=1`, attendu par Vercel. En local, le cache reste isole dans `.next-fecocy` pour eviter les conflits avec les autres applications. La configuration est couverte par `npm run test:build-config`.
